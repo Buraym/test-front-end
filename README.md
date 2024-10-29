@@ -1,22 +1,27 @@
 # Joinads Frontend Test
 
 ## Intro
-Welcome, developer! We’re excited to have you here and eager to see your creativity and skills in action. For this test, you’ll work with an API to retrieve and display a list of items on a single page. We want to keep things simple, yet elegant, to give you a chance to demonstrate your organizational skills, attention to detail, and ability to build well-structured components.
+Welcome, developer! We’re excited to have you here and eager to see your creativity and skills in action. For this test, you’ll work with an API to retrieve and display a list of items on a single page.
 
-- Your task involves displaying a 
-  - list in a table format
-  - a list item is selected, showing additional details on a **separate page**. 
-- Example of [template](https://example.refine.dev/categories/1?pageSize=6&current=1)
+- Your task involves:
+  - A list page.
+  - When a list item is selected, show additional details on a **separate page**
+- We recommend using [this API](https://www.freepublicapis.com/harry-potter-api)
+  - [This endpoint is the most reliable](https://hp-api.onrender.com/api/characters/staff), we recommend using it.
+- [Example](https://store.refine.dev/) of the test.
 - You’ll have some flexibility in how you approach this, and we encourage you to make the project as clean and efficient as possible.
 
-- Fork this repo and send your repo to this email: gabriely.santos@joinads.me
+- Fork this repo and send it to this email: gabriely.santos@joinads.me
+- In case of any doubts you can text this phone number: +5538992081253, Rafael.
 
-## Requirements
-- It should be in typescript
+## Functional Requirements
+- The test should be in typescript.
 - The list should be displayed using [MUI DataGrid table](https://mui.com/x/react-data-grid/).
 - The search should be used with the name of the item.
 - List page.
+  - The list needs to be ordered
 - Show page.
+  - Show the maximum amount of information
 
 ## Non-functional requirements
 - Your design
