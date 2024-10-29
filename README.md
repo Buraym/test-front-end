@@ -7,7 +7,7 @@ Welcome, developer! We’re excited to have you here and eager to see your creat
   - A list page.
   - When a list item is selected, show additional details on a **separate page**
 - We recommend using [this API](https://www.freepublicapis.com/harry-potter-api)
-  - [This endpoint is the most reliable](https://hp-api.onrender.com/api/characters/staff), we recommend using it.
+  - [This endpoint is the most reliable](https://hp-api.onrender.com/api/characters/staff)
 - [Example](https://store.refine.dev/) of the test.
 - You’ll have some flexibility in how you approach this, and we encourage you to make the project as clean and efficient as possible.
 
