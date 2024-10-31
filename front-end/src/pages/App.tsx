@@ -1,7 +1,6 @@
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { ptBR } from "@mui/x-data-grid/locales";
 
-import { Button } from "@/components/ui/button";
 import { ThemeDropdownButton } from "@/components/theme/theme-dropdown-btn";
 import {
     Tooltip,
@@ -15,8 +14,12 @@ import { Input } from "@/components/ui/input";
 import { CalendarX, WandSparkles } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useTheme } from "@/components/theme/theme-provider";
 
-function App() {
+export default function App() {
+    const navigate = useNavigate();
+    const { theme } = useTheme();
     const [characterNameSearch, setCharacterNameSearch] = useState<string>("");
     const { isFetching, data } = useQuery<any, Error, GridColDef[], any[]>({
         queryKey: ["staff", characterNameSearch],
@@ -69,7 +72,7 @@ function App() {
             },
             align: "center",
             headerAlign: "center",
-            headerName: "Espécia",
+            headerName: "Espécie",
             width: 150,
         },
         {
@@ -212,7 +215,7 @@ function App() {
         {
             field: "patronus",
             renderCell: (params) => {
-                let species_dict = {
+                let patronus_dict = {
                     "tabby cat": "Gata malhada",
                     doe: "Cerva",
                     wolf: "Lobo",
@@ -220,7 +223,7 @@ function App() {
                     "persian cat": "Gato persa",
                 };
                 // @ts-ignore
-                return species_dict[String(params.value).toLowerCase()];
+                return patronus_dict[String(params.value).toLowerCase()];
             },
             align: "center",
             headerAlign: "center",
@@ -248,13 +251,13 @@ function App() {
                         }
                         placeholder="Procurar pelo nome"
                     />
-                    <Button type="submit">Pesquisar</Button>
                 </div>
                 <ThemeDropdownButton />
             </div>
             <div className="flex flex-col place-items-start w-full">
                 <DataGrid
                     className="w-full"
+                    onCellClick={(params) => navigate(`/${params.id}`)}
                     loading={isFetching}
                     rows={data}
                     columns={columns}
@@ -268,10 +271,19 @@ function App() {
                         },
                     }}
                     ignoreDiacritics
+                    density="compact"
+                    sx={{
+                        // background: "#fff",
+                        "& .MuiTablePagination-toolbar": {
+                            background: "#fff",
+                            color: "#000",
+                        },
+                        "& .MuiDataGrid-cell": {
+                            color: theme === "dark" ? "#fff" : "#000",
+                        },
+                    }}
                 />
             </div>
         </div>
     );
 }
-
-export default App;

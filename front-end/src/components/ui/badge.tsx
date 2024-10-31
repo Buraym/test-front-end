@@ -16,13 +16,13 @@ const badgeVariants = cva(
                     "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
                 outline: "text-foreground",
                 Gryffindor:
-                    "text-foreground bg-gradient-to-r from-red-600 to-yellow-600 text-white",
+                    "text-foreground bg-gradient-to-r from-red-600 to-yellow-600 text-white border-none",
                 Hufflepuff:
-                    "text-foreground bg-gradient-to-r from-yellow-500 to-gray-900 text-white",
+                    "text-foreground bg-gradient-to-r from-yellow-500 to-gray-900 text-white border-none",
                 Ravenclaw:
-                    "text-foreground bg-gradient-to-r from-blue-950 to-amber-900 text-white",
+                    "text-foreground bg-gradient-to-r from-blue-950 to-amber-900 text-white border-none",
                 Slytherin:
-                    "text-foreground bg-gradient-to-r from-green-950 to-gray-600 text-white",
+                    "text-foreground bg-gradient-to-r from-green-950 to-gray-600 text-white border-none",
             },
         },
         defaultVariants: {
